@@ -9,8 +9,7 @@ import UIKit
 
 class RegisterViewController: UIViewController{
     
-    @IBOutlet private weak var viewContent: UIView!
-    @IBOutlet private weak var anchorCenterContentY: NSLayoutConstraint!
+    @IBOutlet private weak var anchorBottomScroll: NSLayoutConstraint!
 }
 //MARK - Life Cycle
 extension RegisterViewController{
@@ -36,7 +35,6 @@ extension RegisterViewController{
 extension RegisterViewController{
     @IBAction private func tapToCloseKeyboard(_ sender: UITapGestureRecognizer){
         self.view.endEditing(true)
-
     }
 }
 
@@ -53,21 +51,17 @@ extension RegisterViewController{
     @objc private func keyboardWillShow(_ notification: Notification){
         let animationDuration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double ?? 0
         let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect ?? .zero
-        
-        if keyboardFrame.origin.y < self.viewContent.frame.maxY{
-            UIView.animate(withDuration: animationDuration){
-                self.anchorCenterContentY.constant = keyboardFrame.origin.y - self.viewContent.frame.maxY
-                self.view.layoutIfNeeded()
-            }
+        UIView.animate(withDuration: animationDuration){
+            self.anchorBottomScroll.constant = keyboardFrame.height
+            self.view.layoutIfNeeded()
         }
     }
     @objc private func keyboardWillHide(_ notification: Notification){
         
         let animationDuration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double ?? 0
         UIView.animate(withDuration: animationDuration){
-            self.anchorCenterContentY.constant = 0
+            self.anchorBottomScroll.constant = 0
             self.view.layoutIfNeeded()
         }
-        
     }
 }
