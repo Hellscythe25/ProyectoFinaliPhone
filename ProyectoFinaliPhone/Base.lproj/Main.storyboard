@@ -360,6 +360,7 @@
                                         </constraints>
                                     </view>
                                 </subviews>
+                                <gestureRecognizers/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="LmX-Rl-wKZ" secondAttribute="trailing" id="1W5-GE-8nw"/>
                                     <constraint firstItem="LmX-Rl-wKZ" firstAttribute="leading" secondItem="m5X-dA-DxC" secondAttribute="leading" id="2BT-1v-W16"/>
@@ -373,6 +374,9 @@
                                     <constraint firstItem="bHQ-jq-QRO" firstAttribute="top" secondItem="LmX-Rl-wKZ" secondAttribute="bottom" id="uz8-Nq-Zxv"/>
                                     <constraint firstItem="bHQ-jq-QRO" firstAttribute="width" secondItem="m5X-dA-DxC" secondAttribute="width" id="wZt-0t-w4W"/>
                                 </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="W8L-Vl-tOO" appends="YES" id="wHq-79-Cik"/>
+                                </connections>
                             </scrollView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Mks-h7-m0j"/>
@@ -384,9 +388,6 @@
                             <constraint firstItem="m5X-dA-DxC" firstAttribute="leading" secondItem="Mks-h7-m0j" secondAttribute="leading" id="YSC-ey-jZM"/>
                             <constraint firstItem="m5X-dA-DxC" firstAttribute="top" secondItem="Mks-h7-m0j" secondAttribute="top" id="f07-jh-vVc"/>
                         </constraints>
-                        <connections>
-                            <outletCollection property="gestureRecognizers" destination="bgI-Mr-7iy" appends="YES" id="9N8-yo-Bv8"/>
-                        </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Registro" id="3gx-Fo-fMs"/>
                     <size key="freeformSize" width="428" height="1000"/>
@@ -396,9 +397,9 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BtQ-4n-Yy1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="bgI-Mr-7iy">
+                <tapGestureRecognizer id="W8L-Vl-tOO">
                     <connections>
-                        <action selector="tapToCloseKeyboard:" destination="bbI-ax-n2P" id="cCw-Gy-Irj"/>
+                        <action selector="tapToCloseKeyboard:" destination="bbI-ax-n2P" id="key-NH-3no"/>
                     </connections>
                 </tapGestureRecognizer>
             </objects>
