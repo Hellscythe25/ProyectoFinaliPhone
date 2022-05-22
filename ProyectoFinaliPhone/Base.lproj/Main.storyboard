@@ -469,9 +469,17 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Ingresar código" id="ake-5V-afE"/>
+                    <connections>
+                        <outlet property="anchorCenterContentY" destination="uet-2z-27d" id="Mhc-5b-w3L"/>
+                        <outlet property="viewContent" destination="W5e-c6-gFo" id="dF5-SD-VXb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sOM-DW-qk3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="GYL-dC-hcw"/>
+                <tapGestureRecognizer id="GYL-dC-hcw">
+                    <connections>
+                        <action selector="tapToCloseKeyboard:" destination="6cw-EL-YWu" id="MMP-Fz-MEW"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="1408.8785046728972" y="68.682505399568043"/>
         </scene>
@@ -728,9 +736,17 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" title="Ingresar Correo" id="Sfd-SG-3E4"/>
+                    <connections>
+                        <outlet property="anchorCenterContentY" destination="eZs-wh-41l" id="MtP-FB-BGd"/>
+                        <outlet property="viewContent" destination="oCA-oH-Eef" id="6hk-H8-sVY"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dfn-Zd-E2v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <tapGestureRecognizer id="g3I-5P-fun"/>
+                <tapGestureRecognizer id="g3I-5P-fun">
+                    <connections>
+                        <action selector="tapToCloseKeyboard:" destination="Pry-98-pBH" id="RHv-ez-DTe"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="640.65420560747657" y="68.682505399568043"/>
         </scene>
