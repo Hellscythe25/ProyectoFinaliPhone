@@ -24,7 +24,7 @@
             </objects>
             <point key="canvasLocation" x="-1194" y="69"/>
         </scene>
-        <!--Login View Controller-->
+        <!--Login-->
         <scene sceneID="esD-wO-Skf">
             <objects>
                 <viewController id="uvF-zU-qQx" customClass="LoginViewController" customModule="ProyectoFinaliPhone" customModuleProvider="target" sceneMemberID="viewController">
@@ -180,7 +180,7 @@
                             <outletCollection property="gestureRecognizers" destination="CFJ-eM-pz7" appends="YES" id="WNf-gy-8Oh"/>
                         </connections>
                     </view>
-                    <navigationItem key="navigationItem" id="tKc-8K-G53"/>
+                    <navigationItem key="navigationItem" title="Login" id="tKc-8K-G53"/>
                     <connections>
                         <outlet property="anchorCenterContentY" destination="IED-L2-FRR" id="NXY-wZ-oJU"/>
                         <outlet property="viewContent" destination="SkP-3g-elQ" id="kbL-Ty-x2L"/>
@@ -195,7 +195,7 @@
             </objects>
             <point key="canvasLocation" x="-109.34579439252336" y="68.682505399568043"/>
         </scene>
-        <!--Register View Controller-->
+        <!--Registrarse-->
         <scene sceneID="ofv-e6-7an">
             <objects>
                 <viewController id="Jsu-Br-biA" customClass="RegisterViewController" sceneMemberID="viewController">
@@ -354,16 +354,16 @@
                             <constraint firstItem="glv-cC-nFj" firstAttribute="centerX" secondItem="zmE-jx-Prh" secondAttribute="centerX" id="xE4-1Q-Zv0"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="4Dz-vC-odd"/>
+                    <navigationItem key="navigationItem" title="Registrarse" id="4Dz-vC-odd"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rEC-wT-mu4" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-109" y="835"/>
         </scene>
-        <!--View Controller-->
+        <!--Código-->
         <scene sceneID="ED0-f8-bvV">
             <objects>
-                <viewController id="6cw-EL-YWu" sceneMemberID="viewController">
+                <viewController id="6cw-EL-YWu" customClass="MailCodeViewController" customModule="ProyectoFinaliPhone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="02v-dS-8kQ">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -411,16 +411,16 @@
                         <viewLayoutGuide key="safeArea" id="lUc-p1-UuB"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ake-5V-afE"/>
+                    <navigationItem key="navigationItem" title="Código" id="ake-5V-afE"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sOM-DW-qk3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1409" y="69"/>
         </scene>
-        <!--View Controller-->
+        <!--Nueva Contraseña-->
         <scene sceneID="JOh-LE-2q3">
             <objects>
-                <viewController id="g7w-HD-c3W" sceneMemberID="viewController">
+                <viewController id="g7w-HD-c3W" customClass="PasswordChangeViewController" customModule="ProyectoFinaliPhone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="weg-wV-XpZ">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -479,16 +479,16 @@
                         <viewLayoutGuide key="safeArea" id="HYI-m2-AzA"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="u5l-lp-l8K"/>
+                    <navigationItem key="navigationItem" title="Nueva Contraseña" id="u5l-lp-l8K"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="52z-gl-4Sn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2181" y="69"/>
         </scene>
-        <!--View Controller-->
+        <!--Ingresar Correo-->
         <scene sceneID="nTd-Iz-nfs">
             <objects>
-                <viewController id="Pry-98-pBH" sceneMemberID="viewController">
+                <viewController id="Pry-98-pBH" customClass="EnterMailViewController" customModule="ProyectoFinaliPhone" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="t2G-4b-ckQ">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -544,7 +544,7 @@
                         <viewLayoutGuide key="safeArea" id="sgC-Or-ySl"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Sfd-SG-3E4"/>
+                    <navigationItem key="navigationItem" title="Ingresar Correo" id="Sfd-SG-3E4"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dfn-Zd-E2v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
