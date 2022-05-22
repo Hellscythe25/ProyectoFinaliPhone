@@ -8,6 +8,7 @@
 import UIKit
 
 class LoginViewController: UIViewController{
+    
     @IBOutlet private weak var viewContent: UIView!
     @IBOutlet private weak var anchorCenterContentY: NSLayoutConstraint!
 }
@@ -58,10 +59,7 @@ extension LoginViewController{
                 self.anchorCenterContentY.constant = keyboardFrame.origin.y - self.viewContent.frame.maxY
                 self.view.layoutIfNeeded()
             }
-            
         }
-        
-    
     }
     @objc private func keyboardWillHide(_ notification: Notification){
         
