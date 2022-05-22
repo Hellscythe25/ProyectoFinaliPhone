@@ -8,7 +8,8 @@
 import UIKit
 
 class LoginViewController: UIViewController{
-    
+    @IBOutlet private weak var viewContent: UIView!
+    @IBOutlet private weak var anchorCenterContentY: NSLayoutConstraint!
 }
 //MARK - Life Cycle
 extension LoginViewController{
@@ -34,6 +35,7 @@ extension LoginViewController{
 extension LoginViewController{
     @IBAction private func tapToCloseKeyboard(_ sender: UITapGestureRecognizer){
         self.view.endEditing(true)
+
     }
 }
 
@@ -48,9 +50,26 @@ extension LoginViewController{
     }
     
     @objc private func keyboardWillShow(_ notification: Notification){
+        let animationDuration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double ?? 0
+        let keyboardFrame = notification.userInfo?[UIResponder.keyboardFrameEndUserInfoKey] as? CGRect ?? .zero
+        
+        if keyboardFrame.origin.y < self.viewContent.frame.maxY{
+            UIView.animate(withDuration: animationDuration){
+                self.anchorCenterContentY.constant = keyboardFrame.origin.y - self.viewContent.frame.maxY
+                self.view.layoutIfNeeded()
+            }
+            
+        }
+        
     
     }
     @objc private func keyboardWillHide(_ notification: Notification){
+        
+        let animationDuration = notification.userInfo?[UIResponder.keyboardAnimationDurationUserInfoKey] as? Double ?? 0
+        UIView.animate(withDuration: animationDuration){
+            self.anchorCenterContentY.constant = 0
+            self.view.layoutIfNeeded()
+        }
         
     }
 }

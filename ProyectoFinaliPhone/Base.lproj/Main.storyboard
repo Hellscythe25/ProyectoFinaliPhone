@@ -156,6 +156,10 @@
                         </connections>
                     </view>
                     <navigationItem key="navigationItem" id="tKc-8K-G53"/>
+                    <connections>
+                        <outlet property="anchorCenterContentY" destination="IED-L2-FRR" id="NXY-wZ-oJU"/>
+                        <outlet property="viewContent" destination="SkP-3g-elQ" id="kbL-Ty-x2L"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Lq6-YP-o6q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tapGestureRecognizer id="CFJ-eM-pz7">
