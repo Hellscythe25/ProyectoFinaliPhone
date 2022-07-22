@@ -16,7 +16,7 @@
 		4C3B1F44283A0821002845DD /* MailCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B1F43283A0821002845DD /* MailCodeViewController.swift */; };
 		4C3B1F46283A0876002845DD /* EnterMailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B1F45283A0876002845DD /* EnterMailViewController.swift */; };
 		4C3B1F48283A08F2002845DD /* PasswordChangeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3B1F47283A08F2002845DD /* PasswordChangeViewController.swift */; };
-		4C9B9CC52839EE8400D0E301 /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C9B9CC42839EE8400D0E301 /* RegisterViewController.swift */; };
+		4C7903CF288B4A3500B5DDF4 /* NewRegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7903CE288B4A3500B5DDF4 /* NewRegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,7 +31,7 @@
 		4C3B1F43283A0821002845DD /* MailCodeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MailCodeViewController.swift; sourceTree = "<group>"; };
 		4C3B1F45283A0876002845DD /* EnterMailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterMailViewController.swift; sourceTree = "<group>"; };
 		4C3B1F47283A08F2002845DD /* PasswordChangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChangeViewController.swift; sourceTree = "<group>"; };
-		4C9B9CC42839EE8400D0E301 /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		4C7903CE288B4A3500B5DDF4 /* NewRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,10 +71,10 @@
 				4C2155372839DDBC000B1F1A /* LaunchScreen.storyboard */,
 				4C21553A2839DDBC000B1F1A /* Info.plist */,
 				4C2155402839E67D000B1F1A /* LoginViewController.swift */,
-				4C9B9CC42839EE8400D0E301 /* RegisterViewController.swift */,
 				4C3B1F43283A0821002845DD /* MailCodeViewController.swift */,
 				4C3B1F45283A0876002845DD /* EnterMailViewController.swift */,
 				4C3B1F47283A08F2002845DD /* PasswordChangeViewController.swift */,
+				4C7903CE288B4A3500B5DDF4 /* NewRegisterViewController.swift */,
 			);
 			path = ProyectoFinaliPhone;
 			sourceTree = "<group>";
@@ -151,10 +151,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C2155412839E67D000B1F1A /* LoginViewController.swift in Sources */,
+				4C7903CF288B4A3500B5DDF4 /* NewRegisterViewController.swift in Sources */,
 				4C21552D2839DDBC000B1F1A /* AppDelegate.swift in Sources */,
 				4C3B1F46283A0876002845DD /* EnterMailViewController.swift in Sources */,
 				4C21552F2839DDBC000B1F1A /* SceneDelegate.swift in Sources */,
-				4C9B9CC52839EE8400D0E301 /* RegisterViewController.swift in Sources */,
 				4C3B1F48283A08F2002845DD /* PasswordChangeViewController.swift in Sources */,
 				4C3B1F44283A0821002845DD /* MailCodeViewController.swift in Sources */,
 			);
