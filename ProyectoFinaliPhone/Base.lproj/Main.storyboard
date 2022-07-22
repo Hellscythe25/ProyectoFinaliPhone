@@ -41,14 +41,14 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" highlighted="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="IIM-xQ-vGi" userLabel="Correo Field" customClass="CorreoField">
+                                    <textField opaque="NO" contentMode="scaleToFill" highlighted="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="IIM-xQ-vGi" userLabel="Correo Field" customClass="CorreoField">
                                         <rect key="frame" x="10" y="42" width="354" height="40"/>
                                         <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="7Ud-YR-sHJ"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                                     </textField>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Contraseña:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jRu-Qr-KSb">
                                         <rect key="frame" x="10" y="97" width="354" height="32"/>
@@ -56,14 +56,14 @@
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <textField opaque="NO" contentMode="scaleToFill" highlighted="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="iih-E6-KcI" userLabel="Contraseña Field" customClass="ContraseñaField">
+                                    <textField opaque="NO" contentMode="scaleToFill" highlighted="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Contraseña" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="iih-E6-KcI" userLabel="Contraseña Field" customClass="ContraseñaField">
                                         <rect key="frame" x="10" y="134" width="354" height="40"/>
                                         <color key="backgroundColor" systemColor="opaqueSeparatorColor"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="40" id="e6E-2T-H5Q"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <textInputTraits key="textInputTraits"/>
+                                        <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QJn-7W-aP1">
                                         <rect key="frame" x="5" y="179" width="111.5" height="30"/>
@@ -151,6 +151,9 @@
                                         <state key="normal" title="INICIAR SESION">
                                             <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="logInButtonAction:" destination="uvF-zU-qQx" eventType="touchUpInside" id="WdV-MO-aSp"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -183,6 +186,9 @@
                     <navigationItem key="navigationItem" id="tKc-8K-G53"/>
                     <connections>
                         <outlet property="anchorCenterContentY" destination="IED-L2-FRR" id="NXY-wZ-oJU"/>
+                        <outlet property="emailTextField" destination="IIM-xQ-vGi" id="5Pt-op-Rvc"/>
+                        <outlet property="logInButton" destination="nzF-03-Vdm" id="Osr-hP-Vg4"/>
+                        <outlet property="passwordTextField" destination="iih-E6-KcI" id="abj-mr-IqB"/>
                         <outlet property="viewContent" destination="SkP-3g-elQ" id="kbL-Ty-x2L"/>
                     </connections>
                 </viewController>
@@ -379,6 +385,53 @@
                 </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="-109" y="912"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="4y3-B0-qoK">
+            <objects>
+                <viewController id="M4G-Zy-hdx" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tj3-Y4-fde">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="4FO-h9-Vcx">
+                                <rect key="frame" x="20" y="59" width="374" height="136"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sMQ-KN-6qY">
+                                        <rect key="frame" x="0.0" y="0.0" width="374" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tud-mA-dH8">
+                                        <rect key="frame" x="0.0" y="48" width="374" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dHZ-Fc-WIG">
+                                        <rect key="frame" x="0.0" y="96" width="374" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="lPm-GK-ceo"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" title="Cerrar Sesión"/>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="2Ds-qE-qJK"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="4FO-h9-Vcx" firstAttribute="top" secondItem="2Ds-qE-qJK" secondAttribute="top" constant="15" id="8Jt-IO-dZO"/>
+                            <constraint firstItem="2Ds-qE-qJK" firstAttribute="trailing" secondItem="4FO-h9-Vcx" secondAttribute="trailing" constant="20" id="Ax8-bV-5tN"/>
+                            <constraint firstItem="4FO-h9-Vcx" firstAttribute="leading" secondItem="2Ds-qE-qJK" secondAttribute="leading" constant="20" id="hhP-cD-adF"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="jZ8-07-NCd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="641" y="902"/>
         </scene>
         <!--Ingresar código-->
         <scene sceneID="ED0-f8-bvV">

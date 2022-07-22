@@ -6,12 +6,30 @@
 //
 
 import UIKit
+import FirebaseAuth
+
 
 class LoginViewController: UIViewController{
     
     @IBOutlet private weak var viewContent: UIView!
     @IBOutlet private weak var anchorCenterContentY: NSLayoutConstraint!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    
+    @IBOutlet weak var logInButton: UIButton!
+    @IBAction func logInButtonAction(_ sender: Any){
+        if let email = emailTextField.text, let password = passwordTextField.text{
+            Auth.auth().signIn(withEmail: email, password: password){
+                (result, error) in
+                if let result = result, error == nil{
+                    
+                }
+            }
+        }
+    }
 }
+
+
 //MARK - Life Cycle
 extension LoginViewController{
     override func viewDidLoad() {
