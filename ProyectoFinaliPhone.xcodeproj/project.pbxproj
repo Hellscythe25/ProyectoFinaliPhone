@@ -21,6 +21,7 @@
 		4C7903D7288B54F900B5DDF4 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = 4C7903D6288B54F900B5DDF4 /* FirebaseDatabase */; };
 		4C7903D9288B54F900B5DDF4 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 4C7903D8288B54F900B5DDF4 /* FirebaseFirestore */; };
 		4C7903DB288B54F900B5DDF4 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 4C7903DA288B54F900B5DDF4 /* FirebaseStorage */; };
+		4C7903DD288B581700B5DDF4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C7903DC288B581700B5DDF4 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		4C3B1F45283A0876002845DD /* EnterMailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EnterMailViewController.swift; sourceTree = "<group>"; };
 		4C3B1F47283A08F2002845DD /* PasswordChangeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasswordChangeViewController.swift; sourceTree = "<group>"; };
 		4C7903CE288B4A3500B5DDF4 /* NewRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRegisterViewController.swift; sourceTree = "<group>"; };
+		4C7903DC288B581700B5DDF4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +80,7 @@
 				4C2155352839DDBC000B1F1A /* Assets.xcassets */,
 				4C2155372839DDBC000B1F1A /* LaunchScreen.storyboard */,
 				4C21553A2839DDBC000B1F1A /* Info.plist */,
+				4C7903DC288B581700B5DDF4 /* GoogleService-Info.plist */,
 				4C2155402839E67D000B1F1A /* LoginViewController.swift */,
 				4C3B1F43283A0821002845DD /* MailCodeViewController.swift */,
 				4C3B1F45283A0876002845DD /* EnterMailViewController.swift */,
@@ -155,6 +158,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4C2155392839DDBC000B1F1A /* LaunchScreen.storyboard in Resources */,
+				4C7903DD288B581700B5DDF4 /* GoogleService-Info.plist in Resources */,
 				4C2155362839DDBC000B1F1A /* Assets.xcassets in Resources */,
 				4C2155342839DDBC000B1F1A /* Main.storyboard in Resources */,
 			);
