@@ -15,14 +15,25 @@ class LoginViewController: UIViewController{
     @IBOutlet private weak var anchorCenterContentY: NSLayoutConstraint!
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
-    
     @IBOutlet weak var logInButton: UIButton!
+    
+    
+    
     @IBAction func logInButtonAction(_ sender: Any){
         if let email = emailTextField.text, let password = passwordTextField.text{
             Auth.auth().signIn(withEmail: email, password: password){
                 (result, error) in
-                if let result = result, error == nil{
+                if error != nil{
+                    let alertController = UIAlertController(title: "Error", message: "Se ha producido un error al intentar ingresar", preferredStyle: .alert)
+                    alertController.addAction(UIAlertAction(title: "Aceptar", style: .default))
+                    self.present(alertController, animated: true, completion: nil)
+                }
+                else
+                {
+                    let homeViewController = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.homeViewController) as? HomeViewController
                     
+                    self.view.window?.rootViewController = homeViewController
+                    self.view.window?.makeKeyAndVisible()
                 }
             }
         }
@@ -34,6 +45,7 @@ class LoginViewController: UIViewController{
 extension LoginViewController{
     override func viewDidLoad() {
         super.viewDidLoad()
+        title = "Login"
     }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

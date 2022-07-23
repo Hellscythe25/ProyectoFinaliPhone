@@ -6,9 +6,16 @@
 //
 
 import UIKit
+import Firebase
 class NewRegisterViewController: UIViewController{
     
     @IBOutlet private weak var anchorBottomScroll: NSLayoutConstraint!
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var lastNameTextField: UITextField!
+    @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var password2TextField: UITextField!
+    @IBOutlet weak var registerButton: UIButton!
     
     @IBAction private func tapToCloseKeyboard(_ sender: UITapGestureRecognizer){
         self.view.endEditing(true)
@@ -23,6 +30,11 @@ class NewRegisterViewController: UIViewController{
             super.viewWillDisappear(animated)
             self.unregisterKeyboardNotification()
         }
+    
+    @IBAction func signUpButtonAction(_ sender: Any){
+        
+        
+    }
     
 }
 
