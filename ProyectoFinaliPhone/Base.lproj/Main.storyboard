@@ -306,6 +306,9 @@
                                         <state key="normal" title="REGISTRAR">
                                             <color key="titleColor" systemColor="secondarySystemBackgroundColor"/>
                                         </state>
+                                        <connections>
+                                            <action selector="signUpButtonAction:" destination="F8N-ii-ldY" eventType="touchUpInside" id="4HX-dl-9OC"/>
+                                        </connections>
                                     </button>
                                     <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F5E-UA-Z57" customClass="CorreoField">
                                         <rect key="frame" x="20" y="545" width="388" height="40"/>
@@ -375,6 +378,12 @@
                     <size key="freeformSize" width="428" height="926"/>
                     <connections>
                         <outlet property="anchorBottomScroll" destination="vgf-zf-wQf" id="egp-E8-kj5"/>
+                        <outlet property="emailTextField" destination="snY-Fp-z8T" id="iKt-OX-LKS"/>
+                        <outlet property="lastNameTextField" destination="r0g-4B-Apg" id="Z5T-i5-hbZ"/>
+                        <outlet property="nameTextField" destination="BCL-aR-SDL" id="6GC-Td-b6x"/>
+                        <outlet property="password2TextField" destination="F5E-UA-Z57" id="WHI-fy-LOd"/>
+                        <outlet property="passwordTextField" destination="Uva-mj-rzz" id="6qg-b6-oI4"/>
+                        <outlet property="registerButton" destination="SoZ-9A-0y8" id="JuC-ws-RKo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qMp-eh-eX8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
