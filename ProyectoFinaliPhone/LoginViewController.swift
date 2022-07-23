@@ -7,6 +7,7 @@
 
 import UIKit
 import FirebaseAuth
+import SwiftUI
 
 
 class LoginViewController: UIViewController{
@@ -18,10 +19,9 @@ class LoginViewController: UIViewController{
     @IBOutlet weak var logInButton: UIButton!
     
     
-    
     @IBAction func logInButtonAction(_ sender: Any){
         if let email = emailTextField.text, let password = passwordTextField.text{
-            Auth.auth().signIn(withEmail: email, password: password){
+            Auth.auth().signIn(withEmail: email, password: password){ [self]
                 (result, error) in
                 if error != nil{
                     let alertController = UIAlertController(title: "Error", message: "Se ha producido un error al intentar ingresar", preferredStyle: .alert)
@@ -30,11 +30,9 @@ class LoginViewController: UIViewController{
                 }
                 else
                 {
-                    let homeViewController = self.storyboard?.instantiateViewController(withIdentifier: Constants.Storyboard.homeViewController) as? HomeViewController
+                    self.logInButton.addTarget(self, action: #selector(self.DidTapButton), for: .touchUpInside)
                     
-                    self.view.window?.rootViewController = homeViewController
-                    self.view.window?.makeKeyAndVisible()
-                }
+              }
             }
         }
     }
@@ -61,6 +59,12 @@ extension LoginViewController{
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
     }
+    
+    @objc func DidTapButton(){
+        let vc = UIHostingController(rootView: MainChat())
+        present(vc, animated: true)
+    }
+
 }
 //MARK - Action Events
 extension LoginViewController{

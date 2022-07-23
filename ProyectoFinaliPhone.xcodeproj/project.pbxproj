@@ -23,8 +23,13 @@
 		4C7903DB288B54F900B5DDF4 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 4C7903DA288B54F900B5DDF4 /* FirebaseStorage */; };
 		4C7903DD288B581700B5DDF4 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4C7903DC288B581700B5DDF4 /* GoogleService-Info.plist */; };
 		4C7903E1288B6C3700B5DDF4 /* MainScreenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7903E0288B6C3700B5DDF4 /* MainScreenViewController.swift */; };
-		4C7903E7288BB90200B5DDF4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7903E6288BB90200B5DDF4 /* HomeViewController.swift */; };
 		4C7903E9288BB92100B5DDF4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C7903E8288BB92100B5DDF4 /* Constants.swift */; };
+		527F7D2B288BCA0B00F725A1 /* MainChat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F7D2A288BCA0B00F725A1 /* MainChat.swift */; };
+		527F7D2D288BCDE000F725A1 /* ChatRows.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F7D2C288BCDE000F725A1 /* ChatRows.swift */; };
+		527F7D2F288BD11900F725A1 /* ChatModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F7D2E288BD11900F725A1 /* ChatModel.swift */; };
+		527F7D31288BDC6300F725A1 /* DateHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F7D30288BDC6300F725A1 /* DateHelpers.swift */; };
+		527F7D33288BDE0600F725A1 /* ChatsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F7D32288BDE0600F725A1 /* ChatsViewModel.swift */; };
+		527F7D35288BDEFE00F725A1 /* ChatView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 527F7D34288BDEFE00F725A1 /* ChatView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,8 +47,13 @@
 		4C7903CE288B4A3500B5DDF4 /* NewRegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewRegisterViewController.swift; sourceTree = "<group>"; };
 		4C7903DC288B581700B5DDF4 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		4C7903E0288B6C3700B5DDF4 /* MainScreenViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainScreenViewController.swift; sourceTree = "<group>"; };
-		4C7903E6288BB90200B5DDF4 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		4C7903E8288BB92100B5DDF4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		527F7D2A288BCA0B00F725A1 /* MainChat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainChat.swift; sourceTree = "<group>"; };
+		527F7D2C288BCDE000F725A1 /* ChatRows.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatRows.swift; sourceTree = "<group>"; };
+		527F7D2E288BD11900F725A1 /* ChatModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatModel.swift; sourceTree = "<group>"; };
+		527F7D30288BDC6300F725A1 /* DateHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateHelpers.swift; sourceTree = "<group>"; };
+		527F7D32288BDE0600F725A1 /* ChatsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsViewModel.swift; sourceTree = "<group>"; };
+		527F7D34288BDEFE00F725A1 /* ChatView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +90,7 @@
 		4C21552B2839DDBC000B1F1A /* ProyectoFinaliPhone */ = {
 			isa = PBXGroup;
 			children = (
+				527F7D29288BC9E100F725A1 /* ChatSwiftUI */,
 				4C21552C2839DDBC000B1F1A /* AppDelegate.swift */,
 				4C21552E2839DDBC000B1F1A /* SceneDelegate.swift */,
 				4C2155322839DDBC000B1F1A /* Main.storyboard */,
@@ -93,10 +104,22 @@
 				4C3B1F47283A08F2002845DD /* PasswordChangeViewController.swift */,
 				4C7903CE288B4A3500B5DDF4 /* NewRegisterViewController.swift */,
 				4C7903E0288B6C3700B5DDF4 /* MainScreenViewController.swift */,
-				4C7903E6288BB90200B5DDF4 /* HomeViewController.swift */,
 				4C7903E8288BB92100B5DDF4 /* Constants.swift */,
 			);
 			path = ProyectoFinaliPhone;
+			sourceTree = "<group>";
+		};
+		527F7D29288BC9E100F725A1 /* ChatSwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				527F7D2A288BCA0B00F725A1 /* MainChat.swift */,
+				527F7D2C288BCDE000F725A1 /* ChatRows.swift */,
+				527F7D2E288BD11900F725A1 /* ChatModel.swift */,
+				527F7D30288BDC6300F725A1 /* DateHelpers.swift */,
+				527F7D32288BDE0600F725A1 /* ChatsViewModel.swift */,
+				527F7D34288BDEFE00F725A1 /* ChatView.swift */,
+			);
+			path = ChatSwiftUI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -182,11 +205,16 @@
 			files = (
 				4C2155412839E67D000B1F1A /* LoginViewController.swift in Sources */,
 				4C7903CF288B4A3500B5DDF4 /* NewRegisterViewController.swift in Sources */,
+				527F7D2F288BD11900F725A1 /* ChatModel.swift in Sources */,
 				4C21552D2839DDBC000B1F1A /* AppDelegate.swift in Sources */,
 				4C3B1F46283A0876002845DD /* EnterMailViewController.swift in Sources */,
 				4C21552F2839DDBC000B1F1A /* SceneDelegate.swift in Sources */,
+				527F7D33288BDE0600F725A1 /* ChatsViewModel.swift in Sources */,
+				527F7D35288BDEFE00F725A1 /* ChatView.swift in Sources */,
 				4C7903E9288BB92100B5DDF4 /* Constants.swift in Sources */,
-				4C7903E7288BB90200B5DDF4 /* HomeViewController.swift in Sources */,
+				527F7D2B288BCA0B00F725A1 /* MainChat.swift in Sources */,
+				527F7D31288BDC6300F725A1 /* DateHelpers.swift in Sources */,
+				527F7D2D288BCDE000F725A1 /* ChatRows.swift in Sources */,
 				4C7903E1288B6C3700B5DDF4 /* MainScreenViewController.swift in Sources */,
 				4C3B1F48283A08F2002845DD /* PasswordChangeViewController.swift in Sources */,
 				4C3B1F44283A0821002845DD /* MailCodeViewController.swift in Sources */,
